@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crypto Market Data</h1>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by name" onkeyup="searchData()">
+            <button onclick="fetchDataWithThen()">Fetch Data (.then)</button>
+            <button onclick="fetchDataWithAsync()">Fetch Data (async/await)</button>
+            <button onclick="sortData('market_cap')">Sort by Market Cap</button>
+            <button onclick="sortData('percentage_change')">Sort by Percentage Change</button>
+        </div>
+        <table id="cryptoTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Current Price</th>
+                    <th>Total Volume</th>
+                    <th>Market Cap</th>
+                    <th>Percentage Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
